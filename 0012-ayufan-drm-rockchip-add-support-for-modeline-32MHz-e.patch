@@ -6,8 +6,7 @@ Subject: [PATCH 2/2] ayufan: drm: rockchip: add support for modeline 32MHz
 
 ---
  drivers/clk/rockchip/clk-rk3399.c           | 1 +
- drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c | 6 ++++++
- 2 files changed, 7 insertions(+)
+ 1 file changed, 1 insertion(+)
 
 diff --git a/drivers/clk/rockchip/clk-rk3399.c b/drivers/clk/rockchip/clk-rk3399.c
 index 7df2f1e00347..5dcf9b5778a3 100644
@@ -21,23 +20,6 @@ index 7df2f1e00347..5dcf9b5778a3 100644
  	RK3036_PLL_RATE(  27000000, 1, 27, 6, 4, 1, 0),
  	{ /* sentinel */ },
  };
-diff --git a/drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c b/drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c
-index 23de359a1dec..9ad35ed3018e 100644
---- a/drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c
-+++ b/drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c
-@@ -84,6 +84,12 @@ static const struct dw_hdmi_mpll_config rockchip_mpll_cfg[] = {
- 			{ 0x2153, 0x0000},
- 			{ 0x40f3, 0x0000}
- 		},
-+	}, {
-+		32000000, {
-+			{ 0x0072, 0x0001},
-+			{ 0x2153, 0x0000},
-+			{ 0x40f3, 0x0000}
-+		},
- 	}, {
- 		36000000, {
- 			{ 0x00b3, 0x0000},
 -- 
 2.25.1
 

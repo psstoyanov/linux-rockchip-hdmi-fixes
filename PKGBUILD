@@ -72,7 +72,7 @@ md5sums=('071d49ff4e020d58c04f9f3f76d3b594'
          'a033be22c23afb1d5daeeeb21353185d'
          'c02e0fbd88085970a667e86c15fdf364'
          'f6ac26889bc1de62ddc5820769ae07a1'
-         '66fae3fc96f0a478a56ff11632f3ef70' # auyfan patch
+         '634a9e64dc95bb3797aacd1a64b8ee09' # auyfan patch
          'SKIP' # WIP LibreELEC rockchip patch
          '245858f26512dfc48adbf509b6fc8364'
          '252b4dbd2d0f560b6d254f29dd5b0f5f'
