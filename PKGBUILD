@@ -27,7 +27,7 @@ source=("http://www.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
         '0010-usb-typec-add-extcon-to-tcpm.patch' #Not upstreamable #requires cdn_dp to be enabled
         '0011-arm64-rockchip-add-DP-ALT-rockpro64.patch' #Not upstreamable
         '0012-ayufan-drm-rockchip-add-support-for-modeline-32MHz-e.patch'
-        '0012-libreelec_rockchip_hdmi.patch'
+        '0012-libreelec_rockchip_hdmi.patch' # LibreELEC HDMI fixes for rockchip
         '0013-rk3399-rp64-pcie-Reimplement-rockchip-PCIe-bus-scan-delay.patch'
         '0014-phy-rockchip-typec-Set-extcon-capabilities.patch' #Needs tcpm patch 0010 #Not upstreamable
         '0015-usb-typec-altmodes-displayport-Add-hacky-generic-altmode.patch' #Not upstreamable
@@ -72,8 +72,8 @@ md5sums=('071d49ff4e020d58c04f9f3f76d3b594'
          'a033be22c23afb1d5daeeeb21353185d'
          'c02e0fbd88085970a667e86c15fdf364'
          'f6ac26889bc1de62ddc5820769ae07a1'
-         '634a9e64dc95bb3797aacd1a64b8ee09' # auyfan patch
-         'SKIP' # WIP LibreELEC rockchip patch
+         '634a9e64dc95bb3797aacd1a64b8ee09' 
+         '673f9c586f9894c8a132a9a3e91c7fe2' 
          '245858f26512dfc48adbf509b6fc8364'
          '252b4dbd2d0f560b6d254f29dd5b0f5f'
          'ab9c0c25e2b7272fca3caf491b7dc89c'
@@ -127,7 +127,7 @@ prepare() {
   patch -Np1 -i "${srcdir}/0010-usb-typec-add-extcon-to-tcpm.patch"                                     #DP Alt Mode
   patch -Np1 -i "${srcdir}/0011-arm64-rockchip-add-DP-ALT-rockpro64.patch"                              #DP Alt mode - RockPro64
   patch -Np1 -i "${srcdir}/0012-ayufan-drm-rockchip-add-support-for-modeline-32MHz-e.patch"             #DP Alt mode
-  patch -Np1 -i "${srcdir}/0012-libreelec_rockchip_hdmi.patch"                                          #HDMI LibreELEC
+  patch -Np1 -i "${srcdir}/0012-libreelec_rockchip_hdmi.patch"                                          #HDMI LibreELEC - RK3399/RK3328
   patch -Np1 -i "${srcdir}/0013-rk3399-rp64-pcie-Reimplement-rockchip-PCIe-bus-scan-delay.patch"        #RockPro64
   patch -Np1 -i "${srcdir}/0014-phy-rockchip-typec-Set-extcon-capabilities.patch"                       #DP Alt mode
   patch -Np1 -i "${srcdir}/0015-usb-typec-altmodes-displayport-Add-hacky-generic-altmode.patch"         #DP Alt mode
