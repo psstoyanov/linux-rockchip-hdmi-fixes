@@ -39,7 +39,6 @@ source=("http://www.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
         '0022-arm64-dts-rockchip-Add-pcie-bus-scan-delay-to-rockpr.patch'
         '0023-drm-rockchip-support-gamma-control-on-RK3399.patch' #From list: https://patchwork.kernel.org/project/linux-arm-kernel/cover/20211019215843.42718-1-sigmaris@gmail.com/
         '0024-Bluetooth-btsdio-Do-not-bind-to-non-removable-BCM4345-and-BCM43455.patch' #From list: https://patchwork.kernel.org/project/bluetooth/patch/20211020130023.196651-1-kmcopper@danwin1210.me/
-        '0025-usb-typec-fusb302-fix-masking-of-comparator.patch' #From list: https://patchwork.kernel.org/project/linux-usb/patch/20211107185435.2540185-1-megous@megous.com/
         '0026-arm64-dts-rockchip-Add-back-cdn_dp-to-Pinebook-Pro.patch' #Revert from mainline
         '0001-Bluetooth-Add-new-quirk-for-broken-local-ext-features.patch' #From list: https://patchwork.kernel.org/project/bluetooth/patch/20200705195110.405139-2-anarsoul@gmail.com/
         '0002-Bluetooth-btrtl-add-support-for-the-RTL8723CS.patch' #From list: https://patchwork.kernel.org/project/bluetooth/patch/20200705195110.405139-3-anarsoul@gmail.com/
@@ -85,7 +84,6 @@ md5sums=('071d49ff4e020d58c04f9f3f76d3b594'
          '6bb2d84857359016b5e0878cf2fc50cc'
          'e2f08e3bc6d1b36e7000233abab1bfc7'
          'a897b51be2d05ddb5b7b1a7a7f5a5205'
-         '1caddbf177169f9b2af92f02de59f04d'
          'e5436efcd8ccecce82569dc16d2aadda'
          'cf64831f27bb47da29e708b7243bb340'
          'd09c8b41a8c81cb53286a0b3cd8255bc'
@@ -137,7 +135,6 @@ prepare() {
   patch -Np1 -i "${srcdir}/0022-arm64-dts-rockchip-Add-pcie-bus-scan-delay-to-rockpr.patch"             #RockPro64
   patch -Np1 -i "${srcdir}/0023-drm-rockchip-support-gamma-control-on-RK3399.patch"                     #RK3399
   patch -Np1 -i "${srcdir}/0024-Bluetooth-btsdio-Do-not-bind-to-non-removable-BCM4345-and-BCM43455.patch" #Bluetooth
-  patch -Np1 -i "${srcdir}/0025-usb-typec-fusb302-fix-masking-of-comparator.patch"                      #USB-C
   patch -Np1 -i "${srcdir}/0026-arm64-dts-rockchip-Add-back-cdn_dp-to-Pinebook-Pro.patch"               #DP Alt mode - Pinebook Pro
   
   # Pinebook Pro patches
