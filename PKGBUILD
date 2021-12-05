@@ -99,7 +99,7 @@ md5sums=('071d49ff4e020d58c04f9f3f76d3b594'
          '7659fe53cc58b9a7ed615b49719f7066'
          'ae85e433bc4fd787c20a4df0d07d528b'
          '15b2d6fd96df0a070a8f1b4fc5399b8b'
-         'c5e2c93a4f353425f3410ff522e3e282'
+         '9248d8d1ae9b52c76ddfd5afeefcfc6a'
          '86d4a35722b5410e3b29fc92dae15d4b'
          'ce6c81ad1ad1f8b333fd6077d47abdaf'
          '3dc88030a8f2f5a5f97266d99b149f77')
