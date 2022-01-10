@@ -98,7 +98,7 @@ md5sums=('e6680ce7c989a3efe58b51e3f3f0bf93'
          'ae8a39e7070c32db907a49c6a6adc449'
          '4bf751001b57a53fbf4a9ad4cbb953aa'
          '3fdf84791d441fca6ad327bf53a09553'
-         'dacefe12d16491a6aef0471935795888'
+         'f27c500d8d4d1642cdd057b60d075815'
          '86d4a35722b5410e3b29fc92dae15d4b'
          'ce6c81ad1ad1f8b333fd6077d47abdaf'
          '3dc88030a8f2f5a5f97266d99b149f77')
@@ -169,24 +169,24 @@ build() {
   cd ${_srcname}
 
   # get kernel version
-  #make prepare
+  make prepare
 
   # load configuration
   # Configure the kernel. Replace the line below with one of your choice.
-  make menuconfig # CLI menu for configuration
+  #make menuconfig # CLI menu for configuration
   #make nconfig # new CLI menu for configuration
   #make xconfig # X-based configuration
   #make oldconfig # using old config from previous kernel version
   # ... or manually edit .config
 
   # Copy back our configuration (use with new kernel version)
-  cp ./.config /var/tmp/${pkgbase}.config
+  #cp ./.config /var/tmp/${pkgbase}.config
 
   ####################
   # stop here
   # this is useful to configure the kernel
-  msg "Stopping build"
-  return 1
+  #msg "Stopping build"
+  #return 1
   ####################
 
   #yes "" | make config
