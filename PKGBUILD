@@ -38,7 +38,6 @@ source=("http://www.kernel.org/pub/linux/kernel/v5.x/${_srcname}.tar.xz"
         '0021-arm-dts-rockchip-firefly-station-m2.patch'
         '0022-add-dts-rk3568-station-p2.patch'
         '0023-add-dts-rk3568-radxa-rock3a.patch'
-        '0024-vfs-fs_context-fix-up-param-length-parsing.patch'                    # See https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=722d94847de2
         '0001-Bluetooth-Add-new-quirk-for-broken-local-ext-features.patch'         # From list: https://patchwork.kernel.org/project/bluetooth/patch/20200705195110.405139-2-anarsoul@gmail.com/
         '0002-Bluetooth-btrtl-add-support-for-the-RTL8723CS.patch'                 # From list: https://patchwork.kernel.org/project/bluetooth/patch/20200705195110.405139-3-anarsoul@gmail.com/
         '0003-arm64-allwinner-a64-enable-Bluetooth-On-Pinebook.patch'              # From list: https://patchwork.kernel.org/project/bluetooth/patch/20200705195110.405139-4-anarsoul@gmail.com/
@@ -75,7 +74,6 @@ md5sums=('e6680ce7c989a3efe58b51e3f3f0bf93'
          '7b23ad49405f14618cfd92f59c25b911'
          '0ef7f4e1e2e87797be664541ad33e464'
          '516a0c0f0dc663419ed275b94edbab55'
-         'b21e9811d26fd6872fafab0055da6ad2'
          'cf64831f27bb47da29e708b7243bb340'
          'a100d32aa6c345290061d2a773bf1232'
          '9510821113c122f91f47b9d0f7ca7264'
@@ -120,7 +118,6 @@ prepare() {
   #patch -Np1 -i "${srcdir}/0021-arm-dts-rockchip-firefly-station-m2.patch"                          # Firefly Station M2
   #patch -Np1 -i "${srcdir}/0022-add-dts-rk3568-station-p2.patch"                                    # Firefly Station P2
   #patch -Np1 -i "${srcdir}/0023-add-dts-rk3568-radxa-rock3a.patch"                                  # Radxa Rock3A
-  patch -Np1 -i "${srcdir}/0024-vfs-fs_context-fix-up-param-length-parsing.patch"                    # Vulnerability fix, should be in 5.16.3
 
   # Pinebook, PinePhone and PineTab patches
   patch -Np1 -i "${srcdir}/0001-Bluetooth-Add-new-quirk-for-broken-local-ext-features.patch"         # Bluetooth
