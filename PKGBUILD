@@ -7,7 +7,7 @@ _srcname=linux-5.16
 _kernelname=${pkgbase#linux}
 _desc="AArch64 multi-platform"
 pkgver=5.16.2
-pkgrel=4
+pkgrel=5
 arch=('aarch64')
 url="http://www.kernel.org/"
 license=('GPL2')
@@ -175,7 +175,7 @@ build() {
 
 _package() {
   pkgdesc="The Linux Kernel and modules - ${_desc}"
-  depends=('coreutils' 'linux-firmware' 'kmod' 'mkinitcpio>=0.7')
+  depends=('coreutils' 'linux-firmware' 'kmod' 'initramfs')
   optdepends=('crda: to set the correct wireless channels of your country')
   provides=('kernel26' "linux=${pkgver}")
   conflicts=('kernel26' 'linux')
